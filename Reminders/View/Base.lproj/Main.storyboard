@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aWO-FI-Unz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gDU-pU-dSr">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cDd-2C-YfC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="pxR-Kk-pu7" detailTextLabel="OrJ-At-Avo" style="IBUITableViewCellStyleSubtitle" id="Pwv-oA-dGu">
@@ -55,7 +55,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="apU-Ri-DUO"/>
                     <navigationItem key="navigationItem" title="Reminders" largeTitleDisplayMode="always" id="8ho-Mc-SNj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="qKL-fI-vk1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pzc-TL-Aqe">
                             <color key="tintColor" red="0.76169538270000003" green="0.0" blue="0.78987208549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -70,6 +72,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="112.89355322338831"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="feB-cC-gaP">
+            <objects>
+                <tabBarController id="gDU-pU-dSr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3XU-Mc-2EM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aWO-FI-Unz" kind="relationship" relationship="viewControllers" id="tVB-OB-xPO"/>
+                        <segue destination="763-zx-uKc" kind="relationship" relationship="viewControllers" id="CY0-3G-fyz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9p-1p-DZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-802" y="827"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="hx9-C9-19d">
+            <objects>
+                <viewController id="763-zx-uKc" customClass="TimerViewController" customModule="Reminders" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R94-Sf-NeV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GYy-VM-NDx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="ygP-Dg-fQn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gh-nG-jE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="827"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="vtf-HH-joH">
@@ -124,19 +160,20 @@
             </objects>
             <point key="canvasLocation" x="1900" y="116"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Reminders-->
         <scene sceneID="xte-wv-O18">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWO-FI-Unz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reminders" image="list.bullet" catalog="system" id="z1x-bV-bf4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ivr-Gy-ViB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.35479854849999998" green="0.022017354459999999" blue="0.61338244819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.35479854849999998" green="0.022017354459999999" blue="0.61338244819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -149,4 +186,8 @@
             <point key="canvasLocation" x="138.40000000000001" y="112.89355322338831"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

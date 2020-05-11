@@ -15,6 +15,7 @@
 		54C3DB6E245B6C3200EDAF36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C3DB6C245B6C3200EDAF36 /* LaunchScreen.storyboard */; };
 		54C3DB76245B6CF000EDAF36 /* MyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB75245B6CF000EDAF36 /* MyReminder.swift */; };
 		54C3DB78245B713700EDAF36 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB77245B713700EDAF36 /* AddViewController.swift */; };
+		54F8DC172469D3C700364926 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F8DC162469D3C700364926 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		54C3DB6F245B6C3200EDAF36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54C3DB75245B6CF000EDAF36 /* MyReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReminder.swift; sourceTree = "<group>"; };
 		54C3DB77245B713700EDAF36 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		54F8DC162469D3C700364926 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				54C3DB77245B713700EDAF36 /* AddViewController.swift */,
 				54C3DB65245B6C3100EDAF36 /* ViewController.swift */,
+				54F8DC162469D3C700364926 /* TimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				54C3DB66245B6C3100EDAF36 /* ViewController.swift in Sources */,
 				54C3DB62245B6C3100EDAF36 /* AppDelegate.swift in Sources */,
 				54C3DB64245B6C3100EDAF36 /* SceneDelegate.swift in Sources */,
+				54F8DC172469D3C700364926 /* TimerViewController.swift in Sources */,
 				54C3DB76245B6CF000EDAF36 /* MyReminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

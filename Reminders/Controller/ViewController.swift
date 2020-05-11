@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .magenta
         navigationItem.leftBarButtonItem?.tintColor = .magenta
         navigationItem.backBarButtonItem?.tintColor = .magenta
+        
+        guard let tabBar = self.tabBarController?.tabBar else { return }
+        
+        tabBar.tintColor = .magenta
+        tabBar.unselectedItemTintColor = .magenta
     }
 
     @IBAction func didTapAdd () {
@@ -102,7 +107,6 @@ extension ViewController: UITableViewDelegate {
             self.table.deleteRows(at: [indexPath], with: .automatic)
         }
         action.backgroundColor = .red
-        action.image = UIImage(named: "recycle")
         
         return action
     }
@@ -119,6 +123,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         cell.textLabel?.text = models[indexPath.row].title
@@ -129,5 +134,6 @@ extension ViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = formatter.string(from: date)
         
         return cell
+        
     }
 }
